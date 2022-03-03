@@ -19,7 +19,15 @@ Route::get('/', function () {
 });*/
 
 Route::get('/', function () {
-    $menu_item = config('menu_item');
+    $menu_items = config('menu_items');
     $comics_array = config('comics');
-    return view('main' , ['menuitem'=>$menu_item] , ['comics'=>$comics_array]);
+    $buy_items = config('buy_items');
+    return view(
+        'main' , 
+        [
+            'menuItems'=> $menu_items , 
+            'comics'=> $comics_array ,
+            'buyItems'=> $buy_items
+        ]
+    );
 });

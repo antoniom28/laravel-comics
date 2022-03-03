@@ -7,10 +7,10 @@
         <div class="nav">
             <nav>
               <ul>
-                @foreach ($menuitem as $formato)
+                @foreach ($menuItems as $item)
                 <li>
                     <a href="#">
-                        {{ $formato['text'] }}
+                        {{ $item['text'] }}
                     </a>
                 </li>
                 @endforeach
