@@ -65,7 +65,18 @@
             <a href="#">SIGN-UP NOW!</a>
         </div>
 
-          <footerSocial />
+        <div class="footer-social">
+          <h3>FOLLOW US</h3>
+          <ul>
+              @foreach ($socials as $item)
+                <li>
+                  <a href="#">
+                    <img src="{{ asset($item['icon']) }}" alt="">
+                  </a>
+                </li>
+              @endforeach
+          </ul>
+      </div>
         </div>
     </div>
   </footer>
@@ -144,7 +155,7 @@
 
     /*footer-bottom*/
     .footer-bottom{
-  padding: 40px 0;
+  padding: 30px 0;
   background-color: rgb(70, 70, 70);
   display: flex;
   justify-content: space-around;
@@ -155,5 +166,21 @@
     color:white;
     padding: 10px 10px;
     border: 2px solid #558bff;
+}
+
+/*footer-social*/
+.footer-social{
+  display: flex;
+  align-items: center;
+}
+
+.footer-social h3{
+    color: #558bff;
+    margin: 0 15px;
+}
+
+.footer-social ul li{
+    display: inline-block;
+    margin: 0 15px;
 }
   </style>

@@ -22,12 +22,14 @@ Route::get('/', function () {
     $menu_items = config('menu_items');
     $comics_array = config('comics');
     $buy_items = config('buy_items');
+    $social_array = config('socials');
     return view(
         'main' , 
         [
             'menuItems'=> $menu_items , 
             'comics'=> $comics_array ,
-            'buyItems'=> $buy_items
+            'buyItems'=> $buy_items ,
+            'socials' => $social_array
         ]
     );
 });
